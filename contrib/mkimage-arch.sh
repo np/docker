@@ -58,6 +58,6 @@ mknod -m 666 $DEV/full c 1 7
 mknod -m 600 $DEV/initctl p
 mknod -m 666 $DEV/ptmx c 5 2
 
-tar --numeric-owner -C $ROOTFS -c . | docker import - archlinux
-docker run -i -t archlinux echo Success.
+tar --numeric-owner -C $ROOTFS -c . | docker import - d.ail/arch
+docker run -i -t d.ail/arch echo Success.
 rm -rf $ROOTFS
